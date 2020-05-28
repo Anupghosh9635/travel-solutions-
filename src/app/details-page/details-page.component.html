@@ -1,0 +1,135 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-sm-2" style="margin-bottom: 2em;">
+            <h5 class="heading-grid">Top Holiday Destinations</h5>
+            <a class="rounde-button" target="_blank" href="/tour-packages/munnar">Manali</a>
+            <a class="rounde-button" target="_blank" href="/tour-packages/munnar">Kerala</a>
+            <a class="rounde-button" target="_blank" href="/tour-packages/munnar">Gantok</a>
+            <a class="rounde-button" target="_blank" href="/tour-packages/munnar">Munnar</a>
+        </div>
+
+        <div class="col-sm-8"> -->
+
+
+            <div class="mb2 outlet-view">
+
+                <div class="mb1">
+                    <span class="fw9 fs19"> {{packageDetails.packageName}}
+                        <!-- Fun ‘n’ Frolic Goa Family Holiday Package -->
+                    </span>
+                    <span class="day-view">
+                        {{packageDetails.noOfDays}} Days &amp; {{packageDetails.noOfNights}} Nights | {{packageDetails.tripPlaces.length}} Cities
+                        <!-- 5 Days &amp; 4 Nights | 4 Cities -->
+                    </span>
+                </div>
+
+                <div>
+                    <!-- <img style="max-height: 450px;  width: 100%;" alt="Astounding Dubai Honeymoon Package"
+                        src="https://wallpaper-house.com/data/out/5/wallpaper2you_45998.jpg"> -->
+                    <img style="max-height: 450px;  width: 100%;" alt="smiley face" src={{packageDetails.overviewImages[0]}} onerror="this.src='assets/images/alt/enjoy.jpg'">
+                </div>
+
+                <!-- <div class="summery-view" style="margin-top: 1em;">
+                    <div class="header-lineData">
+                        <div class="fs15 "> Highlights </div>
+                        <div class="header-line"></div>
+                        <div class="fw9">
+                            <ul>
+                                <li>Cruise on the Backwaters/Lake</li>
+                                <li>Kalaripayattu Show</li>
+                                <li>Periyar Boat Ride</li>
+                                <li>Elephant Ride</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="container summery-view1" >
+
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#highlights" class="fs15"> Highlights</a></li>
+                        <li><a data-toggle="tab" href="#overview" class="fs15">Overview</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="highlights" class="tab-pane fade in active highlight" >
+                          <ul>
+                            <li *ngFor="let data of (packageDetails.highlights || []) ">{{data}}</li>
+                        </ul>
+                        </div>
+                        <div id="overview" class="tab-pane fade highlight">
+                          <p *ngFor="let data of (packageDetails.overview || []) " >{{data}}</p>
+                        </div>
+                    </div>
+                   
+                </div>
+
+                <div *ngFor="let dayWData of dayWiseList">
+                    <div class="half-circle">
+                        <span class="fs15 day-name"> Day</span>
+                        <span class="day-value">{{dayWData.dayNo}}</span>
+                    </div>
+                    <div class="summery-view" style="margin-top: 1em;">
+                        <div class="row outlet-view">
+                            <div class="col-sm-4">
+                                <!-- <img style="width:100%" alt="Astounding Dubai Honeymoon Package"
+                                    src="https://img.traveltriangle.com/attachments/pictures/856904/original/Goa-beach-fun.jpg"> -->
+                                    <img style="width: 100%;" alt="smiley face" src={{dayWData.images[0]}} onerror="this.src='assets/images/alt/enjoy.jpg'">
+                            </div>
+                            <div class="col-sm-8">
+                                <span class="rounde-btn-type" *ngFor="let placeNm of dayWData.place">{{placeNm}}</span>
+                                
+                                <div class="header-line"></div>
+                                <div *ngFor="let dayInfo of dayWData.infoData">
+                                    <h4>{{dayInfo.heading}}</h4>
+                                    <div class="fs12">
+                                        {{dayInfo.description}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div>
+                    <div class="half-circle">
+                        <span class="fs15 day-name"> Day</span>
+                        <span class="day-value">2</span>
+                    </div>
+                    <div class="summery-view" style="margin-top: 1em;">
+                        <div class="row outlet-view">
+                            <div class="col-sm-4">
+                                <img style="width:100%" alt="Astounding Dubai Honeymoon Package"
+                                    src="https://img.traveltriangle.com/attachments/pictures/856940/original/Goa-holiday-tour.jpg">
+                            </div>
+                            <div class="col-sm-8">
+                                <span class="rounde-btn-type">Dolphin Spotting</span>
+                                <span class="rounde-btn-type">Calangute Beach</span>
+                                <div class="header-line"></div>
+                                <div>
+                                    <h4>This day, embark on a North Goa sightseeing tour and experience the best part of your Goa holiday</h4>
+                                    <div class="fs12">
+                                        Wake up early and head out together for a fun-filled dolphin sightseeing tour. Watch dolphins dancing in the sea waves. Come back to the hotel and have breakfast. Later, set out for North Goa sightseeing tour. Explore Coco Beach, Calangute Annexe, Calangute Beach, Baga Beach, and Anjuna Beach with this Goa tour package for couples.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+            </div>
+
+        <!-- </div>
+
+
+        <div class="col-sm-2">
+            <div class='card-footer'>
+                <button class='btn btn-outline-secondary'
+                        (click)='onBack()'
+                        style='width:80px'>
+                  <i class='fa fa-chevron-left'></i> Back
+                </button>
+              </div>
+        </div>
+    </div>
+</div> -->

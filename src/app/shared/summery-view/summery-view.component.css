@@ -1,0 +1,133 @@
+/* oposit 90 de tramsfrom */
+.itnDay span {
+    display: inline-block;
+    font-size: 18px;
+    color: #60c270;
+    position: absolute;
+    left: 5px;
+    top: 24px;
+    letter-spacing: -1px;
+    font-weight: normal;
+    text-transform: uppercase;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+}
+
+a:hover {
+    background: rgb(166, 204, 108);
+    color: white;
+    text-decoration: none;
+}
+
+
+
+span.click-to-top span {
+    display: none; 
+    position: absolute; 
+     bottom: 0;
+   /*  left: 0; 
+     right: 0;  */
+     background: #333;
+      color: #fff; 
+    }
+span.click-to-top:hover span {
+    display: flex;
+    border-radius:2px; 
+    width: 10em;  
+    text-align: center;      
+}
+
+
+/* .container {
+    width: 97%;
+} */
+
+img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.outlet-view{
+    padding: 10px;
+    color: rgb(10, 10, 10);
+    position: relative;
+    font-family: "Times New Roman;"
+}
+
+.agency-color{
+    color: #c46f06;
+    margin-top: 1px;
+}
+
+.day-count {
+    color: #fa8f0b;
+    font-family: Lato,sans-serif!important;
+}
+
+
+
+
+.bottomright {
+    position: absolute;
+    bottom: 8px;
+    right: 1px;
+    font-size: 18px;
+  }
+.margin1{
+    margin: 1px;
+}
+  
+
+/*search box css start here*/
+.search-sec{
+    padding: 2rem;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+@media (min-width: 992px){
+    .search-sec{
+        position: relative;
+        /* top: -114px; */
+        background: rgba(26, 70, 104, 0.51);
+    }
+}
+
+@media (max-width: 992px){
+    .search-sec{
+        background: #1A4668;
+    }
+} 
+
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } 
+

@@ -1,0 +1,308 @@
+
+<div class="row"  *ngIf="isSuccesFullSave">
+    <div class="success-message-position" >
+      <p class="alert alert-success">
+          <strong>Data Save Successfuly.....</strong>
+
+      </p>
+    </div>
+</div>
+
+<div class="display-4" style="margin: 1em;" >
+    Welcome to the Admin dash board ....
+</div>
+
+
+
+<table class="table table-striped" style="border-bottom: 1px solid;">
+    <thead>
+        <tr>
+            <th>Package Name</th>
+            <th>Count</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>In compleate Package </td>
+            <td>10</td>
+            <td><a target="_blank" routerLink="in-cpmpleate">edit</a> </td>
+        </tr>
+        <tr>
+            <td>In Active Package </td>
+            <td>5</td>
+            <td><a target="_blank" routerLink="in-active">edit</a></td>
+        </tr>
+        <tr>
+            <td>All Package </td>
+            <td>50</td>
+            <td><a target="_blank" routerLink="all-package">edit</a></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Preview of the page</h4>
+      </div>
+      <div class="modal-body">
+        <app-summery-view [productArr] = popUpReq ></app-summery-view>
+         <!-- <app-summary-popup [productArrInput]='popUpReq'></app-summary-popup>  -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+<!-- 
+<div *ngIf="isSuccesFullSave" class="success-full-message">Success full saved the data....</div> -->
+
+
+  <button (click)="createPacage()" class="btn btn-info btn-lg" style="float: right; margin: 24px 11px;" [disabled] ='isCreatePackage'> Create New Package</button>
+
+
+<div class="container summery-view1" *ngIf="isCreatePackage" style="margin-top: 7em;">
+
+   
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#summeryV" class="fs12"> Summery View</a></li>
+        <li><a data-toggle="tab" href="#detailsV" class="fs12">Details View</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="summeryV" class="tab-pane fade in active highlight" style="margin: 10px;">
+            <div class="summery-view" style="min-height: 230px; padding: 10px;">
+                <div class="row outlet-view" style="position:relative;">
+                    <div class="col-sm-4">
+                        <img [src]='urlData' width="80%">
+                        <br />
+                        <label class="custom-file-upload">
+                            <input type="file" (change)="onSelectFile($event)" />
+                            <i class="fa fa-cloud-upload"></i> Upload Image
+                        </label>
+
+                    </div>
+                    <div class="col-sm-5">
+                        <input class="text-box form-control" [(ngModel)]="packageName" type="text"
+                            title="Please provide pakage name" placeholder="Please provide package name">
+
+                        <div class="day-view" style="margin-top:8px; margin-left:0px;">
+                            <input type="number" [(ngModel)]="noOfDays" placeholder=" No of Days" class="wid35"  min="0">
+                            Days <input type="number" [(ngModel)]="noOfNights" class="wid35" placeholder=" No of Nights"  min="0">
+                            Nights
+                        </div>
+                        <div>
+                            <span class="fs14 agency-color"> {{agencyName}} </span>
+                            <!-- <app-rating [rating]='product.agencyReview' ></app-rating>  -->
+                        </div>
+                        <div class="">
+                            <h5 class="fw6">DESTINATIONS</h5>
+                            <!-- <input class="text-box form-control" type="text"
+                                placeholder="Please provide City Name , separator for diffrent city"
+                                title="Please provide City Name , separator use for diffrent city"> -->
+                                
+                            <span class="rounde-btn-city" *ngFor="let city of tripPlaces">{{city}}</span>
+                            <input class="text-box form-control details-input-day" type="text"
+                                [(ngModel)]="placeName" title="Please provide detination city name"
+                                placeholder="Please provide place Name">
+                            <button (click)="addCityName(placeName)" class="add-button" >Add City</button>
+                        </div>
+
+                        <div class="">
+                            <h5 class="fw6">INCLUSIONS</h5>
+                            <span *ngFor="let amenitie of amenityList; let ind = index">
+                                <span class="click-to-top">
+                                    <img style="max-width: 30px; max-height: 37px;" src={{amenitie.value}}
+                                        title={{amenitie.display}} /> 
+                                    <input type="checkbox" name="amenitie.name" value="amenitie.name"  [(ngModel)]="aminitiesCheck[ind]" />
+                                </span>&nbsp;&nbsp;&nbsp; &nbsp;
+                            </span>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3">
+                        
+                        <span *ngFor="let package of packageType; let ind = index">
+                            <span class="click-to-top"> 
+                                <span class="rounde-btn-type">{{package}}</span>
+                                <input type="checkbox" name="amenitie.name" value="package"  [(ngModel)]="packageTypeSelcted[ind]" />
+                            </span> &nbsp;&nbsp;&nbsp; &nbsp;
+                        </span>
+
+                        <h5 style="margin-top: 4px; margin-bottom: 3px;">Starting from: </h5>
+                        <span class="green f20 fw8">
+                            Ex. &nbsp; {{'1000' | currency: 'INR' :'symbol':'2.2-2'}}
+                            <input class="text-box form-control" type="number"
+                                title="Please provide price to be taken from user"
+                                placeholder="Please provide Display price" [(ngModel)]="offerPrice">
+                            <!-- {{'product.offerPrice' | currency: product.currency :'symbol':'2.2-2'}} -->
+                        </span>
+                        <span class="f20 fw8">
+                            Ex. &nbsp; <del> {{'1200' | currency: 'INR':'symbol':'2.2-2'}}</del>
+                            <input class="text-box form-control" type="number"
+                                title="Please provide original price it will be show in cross icon"
+                                placeholder="Please provide original Price" [(ngModel)]="originalPrice">
+                            <!-- <del>  {{product.originalPrice | currency: product.currency:'symbol':'2.2-2'}}</del> -->
+                        </span>
+                        <div class="fs12">
+                            Per person on twin sharing basis
+                        </div>
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" (click)="setPupUpdata()" style="padding: 3px 15px; margin-top: 4px;">Preview Page</button>
+
+                        <input class="details-button" type="button" (click)="saveSummeryView()" value="Save Summery View">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Details Page view  Section -->
+        <div id="detailsV" class="tab-pane fade highlight">
+            <div class="mb2 outlet-view">
+                
+                
+                <div class="mb1">
+                    <span class="fw9 fs19"> {{packageName}}
+                        <!-- Fun ‘n’ Frolic Goa Family Holiday Package -->
+                    </span>
+                    <span class="day-view">
+                        {{noOfDays}} Days &amp; {{noOfNights}} Nights | {{tripPlaces.length}} Cities
+                        <!-- 5 Days &amp; 4 Nights | 4 Cities -->
+                    </span>
+                </div>
+
+                <div>
+                    <!-- <img style="max-height: 450px;  width: 100%;" alt="Astounding Dubai Honeymoon Package"
+                        src="https://wallpaper-house.com/data/out/5/wallpaper2you_45998.jpg"> -->
+                    <img style="max-height: 450px;  width: 80%;" alt="smiley face" src={{urlData}} onerror="this.src='assets/images/alt/enjoy.jpg'">
+                </div>
+
+                <!-- <div class="mb1">
+                    <span class="fw9 fs19">
+                        <input class="text-box form-control details-input" type="text" [(ngModel)]="packageName"
+                            title="Please provide pakage name" placeholder="Please provide package name">
+                        
+                    </span>
+                    <span class="day-view">
+                        <input type="number" [(ngModel)]="noOfDays" placeholder="No of Days" class="wid35">
+                        Days <input type="number" [(ngModel)]="noOfNights" class="wid35" placeholder="No of Nights">
+                        Nights
+                
+                    </span>
+                </div>
+                <div>
+                    <img [src]='urlData' width="80%" height="400px">
+                    <br />
+                    <label class="custom-file-upload">
+                        <input type="file" (change)="onSelectFile($event)" />
+                        <i class="fa fa-cloud-upload"></i> Upload Image
+                    </label>
+                </div> -->
+
+                <!-- <div class="container summery-view1"> -->
+                <div class="tab-content" style="margin-top: 20px; margin-bottom: 20px;">
+                    <div>
+                        <label for="usr">Highlights Info</label>
+                        <textarea style="height:120px" class="text-box form-control" type="text"
+                            [(ngModel)]="highlights" title="Please provide pakage name"
+                            placeholder="Please provide highlights info..."></textarea>
+                    </div>
+                    <br />
+                    <div>
+                        <label for="usr">Overview Info</label>
+                        <textarea style="height:120px" class="text-box form-control" type="text" [(ngModel)]="overview"
+                            title="Please provide pakage name" placeholder="Please provide overview info..."></textarea>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <div *ngFor="let dayWData of dayWiseList; let in=index">
+                    <div class="half-circle">
+                        <span class="fs15 day-name"> Day</span>
+                        <!-- [(ngModel)]="dayWiseList[in].dayNo" -->
+                        <span class="day-value">{{in +1}}</span>
+                    </div>
+                    <div class="summery-view" style="margin-top: 1em;">
+                        <div class="row outlet-view-details">
+                            <div class="col-sm-4">
+                                <!-- <img style="width: 100%;" alt="smiley face" src={{dayWData.images[0]}}
+                                    onerror="this.src='assets/images/alt/enjoy.jpg'"> -->
+                                <img [src]='dayWData.images[0]' onerror="this.src='assets/images/icon/uploadImage.jpg'"
+                                    alt="smiley face" width="100%">
+                                <br />
+                                <label class="custom-file-upload">
+                                    <input type="file" (change)="onDaySelectFile($event, in)" />
+                                    <i class="fa fa-cloud-upload"></i> Upload Image
+                                </label>
+                            </div>
+                            <div class="col-sm-8">
+
+                                <span class="rounde-btn-type" *ngFor="let placeNm of dayWData.place">{{placeNm}}</span>
+                                <input class="text-box form-control details-input-day" type="text"
+                                    [(ngModel)]="placeNameArr[in]" title="Please provide place name to be visited this day"
+                                    placeholder="Please provide place Name">
+                                <button (click)="addPlaceName(placeNameArr[in], in)" class="add-button" >Add Place</button>
+
+                                <div class="header-line"></div>
+                                <div *ngFor="let dayInfo of dayWData.infoData">
+                                    <h4><b>{{dayInfo.heading}}</b></h4>
+                                    <div class="fs12">
+                                        {{dayInfo.description}}
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 4em;">
+                                    <div>
+                                        <label for="usr"> Add Hading Info</label>
+                                        <textarea style="height:40px" class="text-box form-control" type="text"
+                                        [(ngModel)]="headingArr[in]" title="Please provide pakage name"
+                                            placeholder="Please provide heading info..."  name ="heading"></textarea>
+                                    </div>
+                                    <br />
+                                    <div>
+                                        <label for="usr"> Add Description</label>
+                                        <textarea style="height:80px" class="text-box form-control" type="text"
+                                        [(ngModel)]="descriptionArr[in]" title="Please provide pakage name"
+                                            placeholder="Please provide Description info..."></textarea>
+                                    </div>
+                                    <button class="details-button buttom-right" type="submit" (click)="addDetailsInfo(headingArr[in] , descriptionArr[in], in)">Add Details info</button>
+                                </div> 
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <button (click)="add()" class="add-button" style="float: right;">Add Number of Days ({{noofDay +1 }})</button>
+                    <!-- {{dayWiseList | json}} -->
+                    <button (click)="saveDetailsView()" class="btn btn-success btn-mm" style="float: right;" > Save Detais View</button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

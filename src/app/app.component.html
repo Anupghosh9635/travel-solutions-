@@ -1,0 +1,38 @@
+<app-heder-info></app-heder-info>
+
+<!-- <i class="fab fa-apple"></i> -->
+<!-- <fa name="cog" animation="spin"></fa>
+
+<fa class="fas fa-camera"></fa>
+<span class="fas fa-camera"></span> -->
+
+
+<!-- <fa-icon icon="faCoffee"></fa-icon> -->
+
+<i fa name="times" border=true></i>
+<!-- <app-heder></app-heder> -->
+
+
+<div class="container" *ngIf=isParentDivActive>
+    <div class="row">
+        <div class="col-sm-2" style="margin-bottom: 2em;">
+            <h5 class="heading-grid">Top Holiday Destinations</h5>
+            <a class="rounde-button" target="_blank" [routerLink]="['/tour-packages', 'manali']" >Manali</a>
+            <a class="rounde-button" target="_blank" href="/tour-packages/munnar">Kerala</a>
+            <a class="rounde-button" target="_blank" href="/tour-packages/munnar">Gantok</a>
+            <a class="rounde-button" target="_blank" href="/tour-packages/munnar">Munnar</a>
+        </div>
+        <div class="col-sm-8">
+
+            <router-outlet></router-outlet>
+
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>
+
+
+<router-outlet *ngIf= '! isParentDivActive'></router-outlet>
+
+    <app-footer-info></app-footer-info>

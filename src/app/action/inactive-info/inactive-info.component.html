@@ -1,0 +1,38 @@
+
+<div *ngIf="loading">
+    loading ...
+    <div class="loader"></div> 
+</div>
+
+
+<div class="display-4" style="margin: 1em;" >
+    In Active dash board ....
+</div>
+
+<table class="table table-striped" style="border-bottom: 1px solid;">
+    <thead>
+        <tr>
+            <th>Packahe Name</th>
+            <th>Package Id</th>
+            <th>Make Active</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let package of productArr; let in = index">
+            <td>{{package.packageName}}</td>
+            <td>{{package.packageId}}</td>
+            <td><input type="radio" [name]='in'> Active</td>
+            <td><input type="radio" [name]='in'> Delete</td>
+            <td><a>Edit</a></td>
+        </tr>
+    </tbody>
+
+</table>
+
+<button style="float: right;margin: 5px;" class="btn btn-danger">Delete</button>
+<button style="float: right; margin: 5px;" class="btn btn-success">Active</button>
+
+
+

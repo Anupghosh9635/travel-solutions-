@@ -1,0 +1,146 @@
+{
+    "packageDetailsRS": {
+      "agencyId": "101",
+      "agencyName": "Anup Travel Ageny",
+      "agencyReview": "3",
+      "packageId": "643",
+      "packageName": "Fun ‘n’ Frolic Goa Family Holiday Package",
+      "originalPrice": "1253",
+      "offerPrice": "1000",
+      "noOfDays": "4",
+      "noOfNights": "5",
+      "currency": "INR",
+      "packageCategory": [
+        "Family"
+      ],
+      "tripPlaces": [
+        "plane",
+        "bear",
+        "Goa"
+      ],
+      "highlights": [
+        "Cruise on the Backwaters/Lake",
+        "Kalaripayattu Show"
+      ],
+      "overview": [
+        "Cruise on the Backwaters/Lake",
+        "Kalaripayattu Show"
+      ],
+      "overviewImages": [
+        "https://wallpaper-house.com/data/out/5/wallpaper2you_45998.jpg"
+      ],
+      "dayWiseList": [
+        {
+          "dayNo": "1",
+          "place": [
+            "Welcome to Goa",
+            "Basilica of Bom Jesus"
+          ],
+          "amenities": [
+            "bear",
+            "food",
+            "car"
+          ],
+          "images": [
+            "https://img.traveltriangle.com/attachments/pictures/856904/original/Goa-beach-fun.jpg"
+          ],
+          "infoData": [
+            {
+              "heading": "The first day of your Goa honeymoon itinerary welcomes you to the scintillating land of Goa. Your journey begins",
+              "description": "Upon arrival at Goa airport/railway station, an agent’s representative will pick you up and escort you to the hotel. Register yourself at the hotel’s reception and relax for a while. Enjoy the first day of your romantic trip leisurely. Enjoy a long walk with your partner at the sandy beaches of Goa or experience the vibrant nightlife on your Goa honeymoon."
+            }
+          ]
+        },
+         {
+          "dayNo": "2",
+          "place": [
+            "Basilica of Bom Jesus",
+            "Miramar Beach",
+            "Dona paula bay",
+            "Se Cathedral"
+          ],
+          "amenities": [
+            "bear",
+            "food",
+            "car"
+          ],
+          "images": [
+            "https://img.traveltriangle.com/attachments/pictures/856893/original/Baga-Beach-Goa.jpg"
+          ],
+          "infoData": [
+            {
+              "heading": "The second day of your Goa family trip is reserved for a fun-filled sightseeing tour of Goa",
+              "description": "Post breakfast, embark on a South Goa sightseeing tour. Start with a visit to Shri Shantadurga Temple at Kavlem and Shri Manguesh Temple at Priol. Admire the Portuguese architectural buildings belonging to the colonial era like Basilica of Bom Jesus and Se Cathedral."
+            },
+            {
+              "heading": "Cab Transfer Steal some quiet moments with each other at South Goa on the third day of this Goa honeymoon package.",
+              "description": "Kickstart this day with a delicious breakfast and then you will then be escorted to South Goa for some peaceful moments with each other. Pay your reverence at the Shri Manguesh Temple and then enjoy the colonial charm of South Goa at the Basilica of Bom Jesus. Whisper sweet nothings in your partner’s ears while relaxing on Miramar Beach and Dona Paula Bay. Head back to North Goa and then enjoy a romantic candlelight dinner on the penultimate day of your trip. "
+            }
+          ]
+        },
+        {
+          "dayNo": "3",
+          "place": [
+            "Dolphin Spotting",
+            "Calangute Beach"
+          ],
+          "amenities": [
+            "bear",
+            "food",
+            "car"
+          ],
+          "images": [
+            "https://img.traveltriangle.com/attachments/pictures/856940/original/Goa-holiday-tour.jpg"
+          ],
+          "infoData": [
+            {
+              "heading": "This day, embark on a North Goa sightseeing tour and experience the best part of your Goa holiday",
+              "description": "Wake up early and head out together for a fun-filled dolphin sightseeing tour. Watch dolphins dancing in the sea waves. Come back to the hotel and have breakfast. Later, set out for North Goa sightseeing tour. Explore Coco Beach, Calangute Annexe, Calangute Beach, Baga Beach, and Anjuna Beach with this Goa tour package for couples."
+            }
+          ]
+        },
+        {
+          "dayNo": "4",
+          "place": [
+            "Leisure Day",
+            "Beach Tour"
+          ],
+          "amenities": [
+            "bear",
+            "food",
+            "car"
+          ],
+          "images": [
+            "https://img.traveltriangle.com/attachments/pictures/856901/original/Sun-kissed-beach-in-Goa.jpg"
+          ],
+          "infoData": [
+            {
+              "heading": "Spend the entire day fourth day of your Goa family tour as per your wish",
+              "description": "Wake up as per your convenience and savor a hearty breakfast. Go out and indulge in souvenir shopping or relax on the pristine beaches of Goa with your kids. After an eventful day, come back to the hotel and stay overnight."
+            }
+          ]
+        },
+        {
+          "dayNo": "5",
+          "place": [
+            "Leisure Day",
+            "Beach Tour"
+          ],
+          "amenities": [
+            "bear",
+            "food",
+            "car"
+          ],
+          "images": [
+            "https://img.traveltriangle.com/attachments/pictures/862636/original/A-Goa-beach-Holiday.jpg"
+          ],
+          "infoData": [
+            {
+              "heading": "It’s time to bid goodbye to this paradise with nostalgic memories",
+              "description": "Have a sumptuous breakfast and check-out from the hotel. Proceed to airport/railway station to board the flight back to your home destination."
+            }
+          ]
+        }
+      ]
+    }
+  }

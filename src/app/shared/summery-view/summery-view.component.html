@@ -1,0 +1,65 @@
+<div *ngIf="loading">
+    loading ...
+    <div class="loader"></div> 
+</div>
+
+
+<div class ="summery-view" *ngFor="let product of productArr">
+    <div class="row outlet-view" style="position:relative;">
+        <div class="col-sm-4">
+            <img alt="smiley face" src={{product.images[0]}} onerror="this.src='assets/images/alt/enjoy.jpg'">
+        </div>
+        <div class="col-sm-5">
+            <h4 class="fw9 ">{{product.packageName}}</h4>
+            
+            <span class="day-view-summery">
+                {{product.noOfDays}} Days &amp; {{product.noOfNights}} Nights | {{product.tripPlaces.length}} Cities
+                <!-- 5 Days &amp; 4 Nights | 4 Cities -->
+            </span>
+            <div> 
+                <span class="fs14 agency-color"> {{product.agencyName}}  </span>
+                <app-star-rating [rating]='product.agencyReview'></app-star-rating>
+                <!-- <app-rating [rating]='product.agencyReview'  ></app-rating>  -->
+            </div>
+            <div class="" >
+                <h5 class="fw6">DESTINATIONS</h5>
+                <!-- <span *ngFor="let place of product.tripPlaces, let i=index" [attr.data-index]="i" >
+                    {{ place }} {{i === product.tripPlaces.length- 1 ? '' : ' | '}} 
+                </span> -->
+                <span *ngFor="let place of product.tripPlaces" class="rounde-btn-city">
+                    {{ place }}
+                </span>
+            </div>
+            
+            <div class="" >
+                <h5 class="fw6">INCLUSIONS</h5>
+                <span *ngFor="let amenitie of product.amenities">
+                    <span class="click-to-top">
+                        <img  style="max-width: 30px;" title='{{amenitie}}' src='assets/images/icon/{{amenitie}}.jpg' /> &nbsp;
+                        <!-- <span class="tooltiptext">Tooltip text</span> -->
+                    </span>
+                </span>
+            </div>
+            
+        </div>
+        <div class="col-sm-3">
+            <!-- <div class="rounde-btn-type">{{product.packageCategory}}</div> -->
+            <span *ngFor = "let category of product.packageCategory" class="rounde-btn-type"> {{category}}</span>
+            <h5 style="margin-top: 4px; margin-bottom: 3px;">Starting from: </h5>
+            <!-- <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+            
+            <span class="green f20 fw8" >
+                {{product.offerPrice | currency: product.currency :'symbol':'2.2-2'}}
+            </span>
+            <span class="f20 fw8" >
+              <del>  {{product.originalPrice | currency: product.currency:'symbol':'2.2-2'}}</del>
+            </span>
+            <div class="fs12"> 
+                Per person on twin sharing basis
+            </div>
+            <input class="details-button" type="button" value="View Details" [routerLink]="['/product', product.packageId]" >
+            <!-- <input class="details-button" type="button" value="Add to cart" > -->
+            <input class="submit-info" type="submit" value="Booking Info" >  
+        </div>
+    </div>
+</div>

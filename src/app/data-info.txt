@@ -1,0 +1,82 @@
+
+
+
+
+new project
+ng new travel-journey
+
+Run thwe project 
+ng serve --port 4201
+
+generate new component 
+ng g c heder-info
+
+generate service
+ng g s summary-info/summary-info
+
+ng g s details-page/details-page
+
+ng g service Auth/Authentication 
+
+generate guard service
+ng g guard Auth/Auth
+
+
+generate new component with module name
+ng g c shared/star-rating --module=shared
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Deploy Angular App 
+
+npm install -g angular-cli-ghpages
+
+ng build --prod --base-href "https://Anupghosh9635.github.io/travel-journey/"
+
+npx angular-cli-ghpages --dir=dist/travel-journey
+
+https://Anupghosh9635.github.io/travel-journey/
+
+
+
+generate module
+ng g m action/action --flat -m app
+
+
+
+configure bootstrap
+npm install bootstrap --save
+npm install jquery --save
+style.css need to add-> @import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+ ng g c footer-info
+ npm install font-awesome --save
+
+npm install --save font-awesome angular-font-awesome
+
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/angular-fontawesome@0.5
+
+
+
+
+
+
+
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
