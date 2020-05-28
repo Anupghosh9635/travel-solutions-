@@ -17,17 +17,17 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                    <div class="col-lg-3 col-md-3 col-sm-7 p-0">
                                         <input type="text" class="form-control search-slt" #destinationsName placeholder="Enter Destinations City"  [(ngModel)]='destinationsName1' name="destinationsName" >
                                     </div>
                                     
-                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                    <div class="col-lg-3 col-md-3 col-sm-7 p-0">
                                         <input type="date" class="form-control search-slt" #dateRange>
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0" *ngIf="!buttonLoader">
+                                    <div class="col-lg-3 col-md-3 col-sm-7 p-0" *ngIf="!buttonLoader">
                                         <button type="button" class="btn btn-danger wrn-btn" (click)="getSummeryData(destinationsName.value, dateRange.value)">Search</button>
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0" *ngIf="buttonLoader">
+                                    <div class="col-lg-3 col-md-3 col-sm-7 p-0" *ngIf="buttonLoader">
                                         <button class="btn btn-danger wrn-btn" type="button" disabled>
                                             <span class="spinner-border spinner-border-sm"></span>
                                             Loading...
