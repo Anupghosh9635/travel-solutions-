@@ -1,0 +1,120 @@
+{
+    "packageSummeryRS": [
+        {
+            "agencyId": "101",
+            "agencyName": "Anup Travel Ageny",
+            "agencyReview": "4",
+            "packageId": "320",
+            "packageName": "Fun ‘n’ Frolic Goa Family Holiday Package",
+            "originalPrice": "1250",
+            "offerPrice": "1100",
+            "noOfDays": "4",
+            "noOfNights": "5",
+            "tripPlaces": [
+                "Kolkata",
+                "Delhi",
+                "Goa"
+            ],
+            "amenities": [
+                "bear",
+                "food",
+                "car",
+                "wifi"
+            ],
+            "packageCategory": [
+                "Family",
+                "Friend"
+            ],
+            "images": [
+                "https://img.traveltriangle.com/attachments/pictures/862611/original/Goa_at_Night.jpg"
+            ],
+            "currency": "INR"
+        },
+        {
+            "agencyId": "121",
+            "agencyName": "Astounding Dubai Honeymoon Package",
+            "agencyReview": "2",
+            "packageId": "B595A900-6261-4E30-BF20-DD03F1D2EACD",
+            "packageName": "Trip to Andaman",
+            "originalPrice": "125300",
+            "offerPrice": "100000",
+            "noOfDays": "5",
+            "noOfNights": "4",
+            "tripPlaces": [
+                "Kolkata",
+                "Andaman",
+                "Nicobor"
+            ],
+            "amenities": [
+                "car",
+                "food",
+                "wifi",
+                "flight"
+            ],
+            "packageCategory": [
+                "HONEYMOON SPECIAL",
+                "Family & Freind "
+            ],
+            "images": [
+                "https://img.traveltriangle.com/attachments/pictures/863233/original/colva-beach.jpg"
+            ],
+            "currency": "INR"
+        },
+        {
+            "agencyId": "101",
+            "agencyName": "Anup Travel Ageny",
+            "agencyReview": "5",
+            "packageId": "643",
+            "packageName": "Spectacular Bali Honeymoon Package",
+            "originalPrice": "1253",
+            "offerPrice": "1000",
+            "noOfDays": "4",
+            "noOfNights": "5",
+            "tripPlaces": [
+                "flight",
+                "bear",
+                "Goa"
+            ],
+            "amenities": [
+                "bear",
+                "food",
+                "car"
+            ],
+            "packageCategory": [
+                "Family"
+            ],
+            "images": [
+                "https://img.traveltriangle.com/attachments/pictures/885541/original/Colorful_bungalows_shutterstock_565871314_709x439_1_687x478.jpg"
+            ],
+            "currency": "INR"
+        },
+        {
+            "agencyId": "121",
+            "agencyName": "Romantic Goa Honeymoon Package: Dolphin Spotting & Beach Walks",
+            "agencyReview": 3.8,
+            "packageId": "243534",
+            "packageName": "Trip to Andaman",
+            "originalPrice": "1253",
+            "offerPrice": "1000",
+            "noOfDays": "5",
+            "noOfNights": "4",
+            "tripPlaces": [
+                "Kolkata",
+                "Andaman",
+                "Nicobor"
+            ],
+            "amenities": [
+                "car",
+                "food",
+                "wifi"
+            ],
+            "packageCategory": [
+                "HONEYMOON SPECIAL"
+            ],
+            "images": [
+                "https://img.traveltriangle.com/attachments/pictures/890755/original/Arambol_beach_in_north_Goa_India_687x478.jpg"
+            ],
+            "currency": "INR"
+        }
+    ]
+}
