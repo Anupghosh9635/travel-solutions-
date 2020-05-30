@@ -13,6 +13,6 @@ const routes:Routes = [
     RouterModule.forChild(routes),
     SharedModule
   ],
-  exports: [RouterModule] 
+  exports: [RouterModule, TourPackagesComponent] 
 })
 export class ProductModule { }

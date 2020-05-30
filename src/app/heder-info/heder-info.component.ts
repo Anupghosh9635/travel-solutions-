@@ -2,6 +2,7 @@ import { Component, OnInit, Injectable } from '@angular/core';
 import { LoginInfoComponent } from '../login-info/login-info.component';
 import { AuthenticationService } from '../Auth/authentication.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-heder-info',
@@ -15,10 +16,19 @@ export class HederInfoComponent implements OnInit {
 
   isLoggedIn$: Observable<boolean>;
 
-  constructor(private authService : AuthenticationService, private loginService : LoginInfoComponent) { 
-    if(localStorage.getItem('currentUser')){
-      this.isProfileDataShoW = true;
-    }
+  userName = 'Profile';
+  constructor(private authService : AuthenticationService, private loginService : LoginInfoComponent, private router : Router) { 
+    let currentUser = localStorage.getItem('currentUser');
+        if(currentUser){
+          this.isProfileDataShoW = true;
+        }
+        let obj = JSON.parse(currentUser);
+        if (obj) {
+          this.userName = obj.userName;
+        }else{
+          this.router.navigate(['login']);
+        }
+
     // if(loginService.getLoggedInName){
     //   this.changeName(true);
     // }
@@ -39,6 +49,7 @@ export class HederInfoComponent implements OnInit {
     if(name){
       console.log('inside-------------------changeName ')
       this.isProfileDataShoW = true;
+	  this.userName =name;
     }
   }
 
